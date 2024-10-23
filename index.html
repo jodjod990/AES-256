@@ -57,6 +57,12 @@
         const keyInput = document.getElementById('key').value;
         const data = document.getElementById('data').value;
 
+        // Cek apakah data kosong
+        if (!data.trim()) {
+            alert('Please enter some data to encrypt.');
+            return; // Jangan lakukan enkripsi jika data kosong
+        }
+
         if (keyInput.length !== 32) {
             alert('Key must be 32 characters long.');
             return;
